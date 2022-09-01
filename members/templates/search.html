@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member(s) found</title>
+</head>
+<body>
+  <h1>Member(s) found</h1>
+
+  <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+        {% for x in mymembers %}
+        <tr>
+            <td>{{ x.id }}</td>
+            <td>{{ x.firstName }}</td>
+            <td>{{ x.lastName }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <a href="{% url 'index' %}">Go Home</a>.
+
+</body>
+</html>
